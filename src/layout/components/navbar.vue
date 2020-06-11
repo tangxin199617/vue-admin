@@ -14,9 +14,7 @@
                             </div>
                             <i class="iconfont icon-user"></i>
                             {{ nickname }}
-                            <i
-                                class="el-icon-arrow-down el-icon--right"
-                            ></i>
+                            <i class="el-icon-arrow-down el-icon--right"></i>
                         </div>
                         <el-dropdown-menu slot="dropdown">
                             <el-dropdown-item @click.native="logout">退出登录</el-dropdown-item>

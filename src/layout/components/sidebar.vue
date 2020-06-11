@@ -19,11 +19,10 @@
 						<el-submenu :index="item.path">
 							<template slot="title">
 								<i class="el-icon-location"></i>
-								<span>{{ item.title }}</span>
+								<span>{{ item.userName }}</span>
 							</template>
 							<template v-for="sitem in item.children">
-								<el-menu-item :index="sitem.path">{{ sitem.title }}</el-menu-item>
-								<el-menu-item index="1-3">高德地图</el-menu-item>
+								<el-menu-item :index="sitem.path">{{ sitem.userName }}</el-menu-item>
 							</template>
 						</el-submenu>
 					</template>
@@ -59,11 +58,8 @@
 	};
 </script>
 
-<style>
-	.side {}
-
-	.el-menu-item,
-	.el-submenu__title {
+<style scoped>
+	.side >>> .el-submenu__title {
 		text-align: left;
 	}
 </style>

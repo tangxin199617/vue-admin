@@ -5,11 +5,11 @@
                 <navbar name="top"></navbar>
             </el-col>
         </el-row>
-        <el-row>
-            <el-col :span="5">
-                <sidebar name="aside"></sidebar>
-            </el-col>
-            <el-col :span="19">
+        <el-row class="row">
+            <div>
+				<sidebar name="aside" class="side"></sidebar>
+			</div>
+            <el-col :span="21">
                 <transition name="fade-transform" mode="out-in">
                     <app-main v-if="show"></app-main>
                 </transition>
@@ -60,5 +60,13 @@ export default {
 .fade-transform-leave-to {
   opacity: 0;
   transform: translateX(30px);
+}
+.row{
+	display: flex;
+}	
+.side{
+	width: 200px;
+	height: 95vh;
+	background-color: rgb(84, 92, 100);
 }
 </style>
