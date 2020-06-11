@@ -4,7 +4,10 @@ import Layout from '@/layout'
 import login from './modules/login' // 登录
 import menu from './modules/menu'  // 首页
 
-
+const originalPush = VueRouter.prototype.push
+   VueRouter.prototype.push = function push(location) {
+   return originalPush.call(this, location).catch(err => err)
+}
 
 Vue.use(VueRouter);
 
