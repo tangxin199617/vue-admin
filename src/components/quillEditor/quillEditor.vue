@@ -30,6 +30,7 @@
 </template>
 <script>
 import { quillEditor } from "vue-quill-editor";
+import { addQuillTitle } from "./quill-title.js";
 import quillConfig from "./toolbar.js";
 export default {
   props: {
@@ -62,13 +63,16 @@ export default {
       data: {}
     };
   },
-
+  mounted() {
+    addQuillTitle();
+  },
   methods: {
     onEditorChange(val) {
       //内容改变事件
       console.log(val);
-      console.log(this.content);
-      this.$emit("editorInput", this.content);
+      this.$emit("editorInput", val.text);
+      //   console.log(this.content);
+      //   this.$emit("editorInput", this.content);
     },
 
     // 富文本图片上传前

@@ -10,20 +10,20 @@
       text-color="#fff"
       active-text-color="#ffd04b"
     >
-      <template v-for="item in menuList">
+      <template v-for="(item, index) in menuList">
         <!-- <el-menu-item :index="item.path">
 					<i class="el-icon-menu"></i>
 					<span slot="title">{{ item.name }}</span>
 				</el-menu-item> -->
-        <el-submenu :index="item.path">
+        <el-submenu :index="item.path" :key="index">
           <template slot="title">
             <i class="el-icon-location"></i>
             <span>{{ item.userName }}</span>
           </template>
-          <template v-for="sitem in item.children">
-            <el-menu-item :index="sitem.path">{{
-              sitem.userName
-            }}</el-menu-item>
+          <template v-for="(sitem, index) in item.children">
+            <el-menu-item :index="sitem.path" :key="index">
+              {{ sitem.userName }}
+            </el-menu-item>
           </template>
         </el-submenu>
       </template>
