@@ -15,6 +15,7 @@ router.beforeEach((to, from, next) => {
     // 路由发生变化修改页面title
     if (to.meta.title) {
         document.title = to.meta.title
+		console.log(to.meta.title)
     }
     if (to.matched.some(record => record.meta.requiresAuth)) {
         // 判断登录状态

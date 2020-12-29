@@ -79,6 +79,7 @@ export default {
 <style scoped>
 .topNav{
     width: 100%;
+	height: 50px;
 }
 .container .topbar-wrap {
     height: 50px;

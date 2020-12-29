@@ -6,9 +6,9 @@ const settingRouter = [
         name: 'root', 
         component: Layout,
         redirect: '/home',
-		userName:'根目录',
+		userName:'富文本',
         meta: {
-            title: '根目录',
+            title: '富文本',
             requiresAuth: true,
         },
         children: [
@@ -16,9 +16,9 @@ const settingRouter = [
                 path: '/home',
                 name: 'root-home',
                 component: () => import('@/views/home'),
-				userName:'首页',
+				userName:'富文本',
                 meta: {
-                    title: '首页',
+                    title: '富文本',
                     requiresAuth: true,
                     icon: '',
                 },

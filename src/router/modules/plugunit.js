@@ -20,6 +20,16 @@ const plugunitRouter = [
 				requiresAuth: true,
 				icon: ''
 			}
+		},{
+			path: '/plugunit/shakeThrot',
+			name: 'plugunit-shakeThrot',
+			component: () => import('@/views/plugunit/shakeThrot'),
+			userName: '防抖节流',
+			meta: {
+				title: '防抖节流',
+				requiresAuth: true,
+				icon: ''
+			}
 		}]
 	}
 ]

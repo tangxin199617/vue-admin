@@ -1,5 +1,7 @@
 <template>
-    <router-view :key="key" />
+    <div class="main">
+		<router-view :key="key" />
+	</div>
 </template>
 
 <script>
@@ -12,6 +14,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.main{
+	padding: 20px;
+}
 </style>

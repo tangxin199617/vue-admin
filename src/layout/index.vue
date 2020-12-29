@@ -1,20 +1,14 @@
 <template>
     <div class="container">
-        <el-row>
-            <el-col :span="24">
-                <navbar name="top"></navbar>
-            </el-col>
-        </el-row>
-        <el-row class="row">
-            <div>
-				<sidebar name="aside" class="side"></sidebar>
-			</div>
-            <el-col :span="21">
-                <transition name="fade-transform" mode="out-in">
-                    <app-main v-if="show"></app-main>
-                </transition>
-            </el-col>
-        </el-row>
+        <sidebar name="aside" class="side"></sidebar>
+        <el-row :span="24" class="content">
+			<el-col>
+				<navbar name="top"></navbar>
+				<transition name="fade-transform" mode="out-in">
+					 <app-main v-if="show"></app-main>
+				</transition>
+			</el-col>
+		</el-row>
     </div>
 </template>
 
@@ -44,8 +38,11 @@ export default {
 <style  scoped>
 .container {
     min-width: 1024px;
+	display: flex;
 }
-
+.content{
+	flex: 1;
+}
 /* fade-transform */
 .fade-transform-leave-active,
 .fade-transform-enter-active {
@@ -60,13 +57,10 @@ export default {
 .fade-transform-leave-to {
   opacity: 0;
   transform: translateX(30px);
-}
-.row{
-	display: flex;
 }	
 .side{
-	width: 200px;
-	height: 95vh;
+	width: 210px;
+	height: 100vh;
 	background-color: rgb(84, 92, 100);
 }
 </style>
