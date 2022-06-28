@@ -69,7 +69,7 @@ export default {
         console.log(element, binding);
       },
       update(element, binding) {
-        console.log("update");
+        console.log("update111");
         console.log(element, binding);
       }
     }
