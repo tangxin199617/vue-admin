@@ -67,7 +67,7 @@ export default {
         console.log("inserted");
       },
       update(element, binding) {
-        console.log("update111");
+        console.log("update11111");
       }
     }
   },
