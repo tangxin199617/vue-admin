@@ -19,7 +19,7 @@ module.exports = {
       // 出现编译器错误或警告时，在浏览器中显示全屏覆盖
       warnings: true,
       errors: true
-    },
+    }
     // proxy: {
     //   "/api": {
     //       target: "http://172.11.11.11:7071",
