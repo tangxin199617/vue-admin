@@ -125,6 +125,7 @@ export default {
       }
 
       this.perShrOwn1 = obj;
+      console.log(111);
     }
   },
   mounted() {}
